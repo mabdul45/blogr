@@ -4,14 +4,18 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    /* background-color: black;
-    color: wheat; */
+}
+
+body,
+html {
+    overflow-x: hidden;
 }
 
 /*======================= Reusable styling ================== */
 /* flex */
 .flex-property {
     display: flex;
+    flex-wrap: wrap;
 }
 
 /*===================== Header styling ====================================== */
@@ -30,8 +34,8 @@ header {
 
 .page-header-nav {
     align-items: center;
-   justify-content: flex-start;
-   gap: 3vw;
+    justify-content: flex-start;
+    gap: 3vw;
 }
 
 .nav-container {
@@ -44,23 +48,47 @@ header {
     gap: 1vw;
 }
 
-.nav-container-list > a {
-    color:  hsl(0, 0%, 100%);
+.nav-container-list>a {
+    color: hsl(0, 0%, 100%);
     text-decoration: none;
     font-size: 14px;
 }
 
-.nav-container-list > a:hover {
+.nav-container-list>a:hover {
     /* color:  hsl(0, 0%, 100%); */
     text-decoration: underline;
 }
 
-.nav-container-list > a img {
+.nav-container-list>a img {
     margin-left: .2vw;
 }
 
-.nav-container-list > ul {
+.nav-container-list>a:hover img {
+    transform: rotate(180deg);
+}
+
+.nav-container-list>ul {
     display: none;
+    z-index: 111;
+    padding: 10px 30px;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(207, 13%, 34%);
+    border-radius: 8px;
+}
+
+.nav-container-list>ul a:hover {
+    color: hsl(237, 17%, 21%);
+}
+
+.nav-container-list>ul a {
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.nav-container-list>a:has(:hover, ul) ul {
+    display: block;
+    z-index: 111;
 }
 
 .nav-btn {
@@ -98,22 +126,22 @@ header {
 }
 
 
-.header-textArea > h2 {
+.header-textArea>h2 {
     font-size: 32px;
     font-weight: 600;
     margin-top: 8vh;
 }
 
-.header-textArea > p {
+.header-textArea>p {
     font-size: 12px;
     margin-top: 4vh;
 }
 
-.header-textArea > div {
+.header-textArea>div {
     margin-top: 4vh;
 }
 
-.header-textArea > div button:first-child {
+.header-textArea>div button:first-child {
     background-color: hsl(0, 0%, 100%);
     font-size: 12px;
     color: hsl(356, 100%, 66%);
@@ -123,12 +151,12 @@ header {
     cursor: pointer;
 }
 
-.header-textArea > div button:first-child:hover {
+.header-textArea>div button:first-child:hover {
     background-color: hsl(355, 100%, 74%);
     color: hsl(0, 0%, 100%);
 }
 
-.header-textArea > div button:last-child {
+.header-textArea>div button:last-child {
     color: hsl(0, 0%, 100%);
     font-size: 12px;
     border: 2px solid hsl(0, 0%, 100%);
@@ -139,38 +167,191 @@ header {
     cursor: pointer;
 }
 
-.header-textArea > div button:last-child:hover {
+.header-textArea>div button:last-child:hover {
     background-color: hsl(0, 0%, 100%);
     color: hsl(356, 100%, 66%);
 }
 
+/* ================================Section styling=================================== */
+
 .section-designedForTheFuture {
     position: relative;
-    margin-top: 30vh;
-    width: 100%;
+    margin-top: 15vh;
+    width: 100vw;
+    height: 100%;
+    padding: 0 60px;
+    /* overflow-y: hidden; */
 }
 
-.section-designedForTheFuture > h3 {
+.section-designedForTheFuture>h3 {
     text-align: center;
+    color: hsl(208, 49%, 24%);
     /* margin-bottom: -80px; */
 }
 
 .section-designedForTheFutureItems {
-    margin-top: 3vh;
+    /* margin-top: 7vh; */
+    justify-content: flex-start;
+    /* overflow-x: hidden; */
 }
 
-.section-designedForTheFutureItems > div:first-child {
+.section-designedForTheFutureItems>div:last-child {
+    width: 50%;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.section-designedForTheFutureItems>div:last-child span {
+    width: 80%;
+    text-align: justify;
+    color: hsl(207, 13%, 34%);
+    line-height: 1.7;
+}
+
+.section-designedForTheFutureItems>div h4 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section-designedForTheFutureItems>div:last-child {
     width: 50%;
 }
 
-.section-designedForTheFutureItems > div:last-child {
-    width: 50%;
-}
-
-.section-designedForTheFutureItems > div:last-child img {
-    /* width: 40vw; */
-    /* height: 70vh; */
-    top: -40px;
-    right: -50px;
+.illustration-editor-desktop {
     position: absolute;
+    overflow: hidden;
+    right: -210px;
+    margin-top: -83px;
+    width: 83%;
+    max-width: 46rem;
+    min-width: 27rem;
+}
+
+.section-stateOfTheArt {
+    background-color: hsl(237, 17%, 21%);
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    border-radius: 0 80px;
+    margin-top: 35vh;
+    justify-content: flex-end;
+    overflow: hidden;
+    height: 58vh;
+}
+
+.section-stateOfTheArt>img {
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    left: 4rem;
+    top: -23rem;
+}
+
+.illustration-phones {
+    position: absolute;
+    z-index: 1;
+    margin-top: -5.5rem;
+    width: 70%;
+    max-width: 37rem;
+    min-width: 14rem;
+}
+
+/* .section-stateOfTheArt div img{
+    position: absolute;
+    top: -120px;
+} */
+
+.section-stateOfTheArt div:last-child {
+    text-align: justify;
+    align-items: center;
+    z-index: 11;
+    max-width: 39%;
+    margin: 106px 35px 4px 0px;
+    padding: 0px 0px 2px 52px;
+}
+
+.section-stateOfTheArt div:last-child h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+.section-stateOfTheArt div:last-child p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.illustration-laptop-desktop {
+    position: absolute;
+    left: -15rem;
+    margin-top: -20rem;
+    width: 84%;
+    max-width: 52rem;
+    min-width: 31rem;
+}
+
+.section-freeOpenPowerful {
+    margin-top: 18rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 120px;
+}
+
+.section-freeOpenPowerful>div {
+    width: 50%;
+    text-align: justify;
+}
+
+.section-freeOpenPowerful>div span {
+    display: block;
+    /* width: 30rem; */
+    color: hsl(207, 13%, 34%);
+}
+
+.section-freeOpenPowerful>div span>h3 {
+    text-align: center;
+    color: hsl(208, 49%, 24%);
+}
+
+.section-freeOpenPowerful>div span:last-child {
+    margin-top: 3rem;
+}
+
+.section-freeOpenPowerful>div span>p {
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+footer {
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    background-color: hsl(240, 10%, 16%);
+    border-radius: 0 80px 0 0;
+    margin-top: 18rem;
+    padding: 40px 140px;
+    color: hsl(0, 0%, 100%);
+}
+
+footer div:last-child {
+    gap: 10rem;
+    justify-content: space-between;
+}
+
+footer div:last-child a {
+    display: block;
+    color: hsl(240, 2%, 79%);
+    text-decoration: none;
+    line-height: 2;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer div:last-child ul {
+    margin-top: 25px;
+}
+
+footer div:last-child a:hover {
+    text-decoration: underline;
 }

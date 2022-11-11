@@ -1,0 +1,109 @@
+@media screen and (max-width:375px) {
+    .nav-container {
+        display: none;
+    }
+
+    .illustration-editor-desktop {
+        position: unset;
+        width: 92%;
+        overflow: unset;
+        right: unset;
+        margin-top: unset;
+        max-width: unset;
+        min-width: unset;
+    }
+
+    .section-designedForTheFutureItems>div:last-child {
+        width: unset;
+    }
+
+   .section-designedForTheFutureItems>div:last-child {
+        width: unset;
+        flex-direction: column;
+        gap: 36px;
+        margin-top: unset;
+    }
+
+    .section-designedForTheFuture {
+        position: relative;
+        margin-top: 15vh;
+        width: unset;
+        height: 100%;
+        padding: 0 0px;
+        /* overflow-y: hidden; */
+    }
+
+    .section-designedForTheFutureItems>div:last-child span {
+        width: unset;
+        text-align: justify;
+        color: hsl(207, 13%, 34%);
+        line-height: 1.3;
+    }
+
+    section:nth-child(2) {
+        margin-top: 23rem;
+    }
+
+    .section-stateOfTheArt {
+        background-color: hsl(237, 17%, 21%);
+        color: hsl(0, 0%, 100%);
+        position: relative;
+        border-radius: 0 80px;
+        margin-top: -21vh;
+        z-index: -1;
+        justify-content: center;
+        overflow: hidden;
+        height: 62vh;
+    }
+
+    .illustration-phones {
+        position: absolute;
+        z-index: 1;
+        margin-top: -10.5rem;
+        width: 92%;
+        max-width: unset;
+        min-width: unset;
+    }
+
+    .section-stateOfTheArt div:last-child {
+        text-align: justify;
+        align-items: center;
+        z-index: 11;
+        max-width: unset;
+        margin: 172px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .section-stateOfTheArt>img {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        left: -3rem;
+        top: -12rem;
+    }
+
+    .section-freeOpenPowerful {
+        margin-top: 18rem;
+        padding: 0 0;
+    }
+
+    .illustration-laptop-desktop {
+        position: unset;
+        left: -15rem;
+        margin-top: -20rem;
+        width: 96%;
+        max-width: unset;
+        min-width: unset;
+    }
+
+    .section-freeOpenPowerful>div {
+        width: unset;
+        text-align: justify;
+    }
+    
+    footer {
+        margin-top: 6rem;
+        padding: 40px 63px;
+    }
+
+}
