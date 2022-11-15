@@ -1,7 +1,123 @@
-@media screen and (max-width:375px) {
-    .nav-container {
+@media screen and (max-width:768px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    header {
+        height: 90vh;
+        background-image: url(../images/bg-pattern-intro-mobile.svg);
+        background-size: 1500px;
+    }
+
+    .desktop-img {
         display: none;
     }
+
+    .mobile-img {
+        display: inline-block;
+    }
+
+    .illustration-editor-mobile, .illustration-laptop-mobile  {
+        width: 85vw;
+        margin-top: 30px;
+    }
+
+    .page-header-nav {
+        position: relative;
+    }
+
+    .nav-container {
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(207, 13%, 34%);
+        position: absolute;
+        display: inline;
+        border-radius: 12px;
+
+        box-shadow: 0px 2px 3px hsl(207deg 13% 34%);
+        right: 0vw;
+        top: 12vh;
+        padding: 9vh;
+        width: 100%;
+        overflow: hidden;
+        z-index: 111;
+        transform: translateX(130%);
+        transition: transform ease-in-out 500ms;
+    }
+
+
+
+    .nav-container-items {
+        flex-direction: column;
+        margin: 5vh auto;
+        width: max-content;
+        gap: 8vh;
+        /* align-items: center; */
+        /* text-align: center; */
+        /* justify-content: center; */
+    }
+
+    .nav-container[data-visible="true"] {
+        overflow: hidden;
+        transform: translateX(0%);
+    }
+
+    .nav-container-list>a {
+        color: hsl(237, 17%, 21%);
+        /* text-decoration: none;
+        font-size: 14px; */
+    }
+
+    .nav-btn button:first-child {
+        color: hsl(237, 17%, 21%);
+        /* gap: 18px; */
+    }
+
+    .nav-btn button:last-child {
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(356, 100%, 66%);
+    }
+
+    .page-header-nav {
+        justify-content: space-between;
+    }
+
+    hr {
+        display: block;
+    }
+
+    .nav-button {
+        display: block;
+        background: transparent;
+        border: none;
+    }
+
+    .nav-btn {
+        flex-direction: column;
+        margin: 30px auto;
+        width: max-content;
+    }
+
+    .nav-btn button:last-child {
+        border-radius: 49px;
+        padding: 12px 5vw;
+    }
+
+    .nav-btn button:last-child:hover {
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(355, 100%, 74%);
+    }
+
+    .header-textArea>div button:first-child:hover {
+        background-color: unset;
+        color: unset;
+    }
+
+    .header-textArea>div button:last-child:hover {
+        background-color: unset;
+        color: unset;
+    }
+
 
     .illustration-editor-desktop {
         position: unset;
@@ -12,18 +128,6 @@
         max-width: unset;
         min-width: unset;
     }
-
-    .section-designedForTheFutureItems>div:last-child {
-        width: unset;
-    }
-
-   .section-designedForTheFutureItems>div:last-child {
-        width: unset;
-        flex-direction: column;
-        gap: 36px;
-        margin-top: unset;
-    }
-
     .section-designedForTheFuture {
         position: relative;
         margin-top: 15vh;
@@ -33,6 +137,24 @@
         /* overflow-y: hidden; */
     }
 
+    .section-designedForTheFutureItems {
+        margin-top: unset;
+        justify-content: center;
+        /* overflow-x: hidden; */
+    }
+
+    .section-designedForTheFutureItems>div:last-child {
+        width: unset;
+    }
+
+    .section-designedForTheFutureItems>div:last-child {
+        width: unset;
+        flex-direction: column;
+        gap: 36px;
+        margin-top: 30px;
+        padding: 0 30px;
+    }   
+
     .section-designedForTheFutureItems>div:last-child span {
         width: unset;
         text-align: justify;
@@ -41,7 +163,7 @@
     }
 
     section:nth-child(2) {
-        margin-top: 23rem;
+        margin-top: 17.3rem;
     }
 
     .section-stateOfTheArt {
@@ -53,16 +175,19 @@
         z-index: -1;
         justify-content: center;
         overflow: hidden;
-        height: 62vh;
+        height: 70vh;
+        padding: 30px;
     }
 
     .illustration-phones {
         position: absolute;
         z-index: 1;
-        margin-top: -10.5rem;
+        margin-top: -20%;
         width: 92%;
-        max-width: unset;
-        min-width: unset;
+        max-width: 20%;
+        /* min-width: 45%; */
+        position: absolute;
+        z-index: 1;
     }
 
     .section-stateOfTheArt div:last-child {
@@ -83,8 +208,9 @@
     }
 
     .section-freeOpenPowerful {
-        margin-top: 18rem;
+        margin-top: 3rem;
         padding: 0 0;
+        justify-content: center;
     }
 
     .illustration-laptop-desktop {
@@ -99,8 +225,14 @@
     .section-freeOpenPowerful>div {
         width: unset;
         text-align: justify;
+        padding: 0 30px;
     }
-    
+
+    .section-freeOpenPowerful>div span>p {
+        line-height: 1.3;
+        margin-top: 10px;
+    }
+
     footer {
         margin-top: 6rem;
         padding: 40px 63px;

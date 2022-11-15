@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="./styles/mobilescreen.css">
 </head>
 
-<body>
+<body style="position: initial;">
 
     <header>
         <div class="page-header-nav flex-property">
             <img href="#" class="logo-image" src="./images/logo.svg" alt="blogr">
-            <nav class="nav-container flex-property">
+            <nav class="nav-container flex-property" data-visible="false">
                 <div class="nav-container-items flex-property">
                     <div class="nav-container-list list1">
-                        <a href="">Product<img src="./images/icon-arrow-light.svg" alt="" /></a>
+                        <a href="">Product <img class="desktop-img" src="./images/icon-arrow-light.svg" alt="" /><img
+                                class="mobile-img" src="./images/icon-arrow-dark.svg" alt=""></a>
                         <ul>
                             <li><a href="">Overview</a></li>
                             <li><a href="">Pricing</a></li>
@@ -29,7 +30,8 @@
                         </ul>
                     </div>
                     <div class="nav-container-list list2">
-                        <a href="">Company<img src="./images/icon-arrow-light.svg" alt="" /></a>
+                        <a href="">Company <img class="desktop-img" src="./images/icon-arrow-light.svg" alt="" /><img
+                                class="mobile-img" src="./images/icon-arrow-dark.svg" alt=""></a>
                         <ul>
                             <li><a href="">About</a></li>
                             <li><a href="">Team</a></li>
@@ -38,7 +40,8 @@
                         </ul>
                     </div>
                     <div class="nav-container-list list3">
-                        <a href="">Connect<img src="./images/icon-arrow-light.svg" alt="" /> </a>
+                        <a href="">Connect <img class="desktop-img" src="./images/icon-arrow-light.svg" alt="" /><img
+                                class="mobile-img" src="./images/icon-arrow-dark.svg" alt=""></a>
                         <ul>
                             <li><a href="">Contact</a></li>
                             <li><a href="">Newsletter</a></li>
@@ -46,11 +49,14 @@
                         </ul>
                     </div>
                 </div>
+                <hr />
                 <div class="nav-btn flex-property">
                     <button type="button">Login</button>
                     <button type="button">Sign Up</button>
                 </div>
             </nav>
+            <button data-visible="false" class="nav-button" title="menu" type="button"><img class="nav-button-image"
+                    src="./images/icon-hamburger.svg" alt=""></button>
         </div>
         <div class="header-textArea">
             <h2>A modern publishing platform</h2>
@@ -69,7 +75,9 @@
             <h3>Designed for the future</h3>
             <div class="section-designedForTheFutureItems flex-property">
                 <div>
-                    <img class="illustration-editor-desktop" src="./images/illustration-editor-desktop.svg" alt="">
+                    <img class="illustration-editor-desktop desktop-img" src="./images/illustration-editor-desktop.svg"
+                        alt=""><img class="illustration-editor-mobile mobile-img"
+                        src="./images/illustration-editor-mobile.svg" alt="">
                 </div>
                 <div class="flex-property">
                     <span>
@@ -103,7 +111,7 @@
             <img class="illustration-phones" src="./images/illustration-phones.svg" alt="">
             <div class="section-stateOfTheArt flex-property">
                 <img src="./images/bg-pattern-circles.svg" alt="">
-                <div>
+                <div class="">
                     <h4>State of the Art Infrastructure</h4>
                     <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
                         connectivity.
@@ -115,17 +123,18 @@
 
         <section class="section-freeOpenPowerful flex-property">
             <div>
-                <img class="illustration-laptop-desktop" src="./images/illustration-laptop-desktop.svg" alt="">
+                <img class="illustration-laptop-desktop desktop-img" src="./images/illustration-laptop-desktop.svg"
+                    alt=""><img class="illustration-laptop-mobile mobile-img"
+                    src="./images/illustration-laptop-mobile.svg" alt="">
             </div>
-            <div>
-                <span>
-                    <h3>Free, open, simple</h3>
-                    <p>Blogr is a free and open source application backed by a large community of helpful developers. It
-                        supports
-                        features such as code syntax highlighting, RSS feeds, social media integration, third-party
-                        commenting tools,
-                        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to
-                        learn.</p>
+            <div <span>
+                <h3>Free, open, simple</h3>
+                <p>Blogr is a free and open source application backed by a large community of helpful developers. It
+                    supports
+                    features such as code syntax highlighting, RSS feeds, social media integration, third-party
+                    commenting tools,
+                    and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to
+                    learn.</p>
                 </span>
                 <span>
                     <h3>Powerful tooling</h3>
