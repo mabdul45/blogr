@@ -1,6 +1,4 @@
 "use script";
-// changing desktop editor illustration to mobile
-// const illustrationEditorDesktop = document.querySelector('.illustration-editor-desktop')
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Implementing menu toggle
 
@@ -23,3 +21,11 @@ navButton.addEventListener('click', () => {
         navButton.setAttribute('src', './images/icon-hamburger.svg')
     }
 })
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// preventing default from anchor links
+
+// asigning veriables
+
+document.querySelectorAll('a').addEventListener('click', function (e) {
+    e.preventdefault()
+});
